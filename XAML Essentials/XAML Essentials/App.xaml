@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAML_Essentials.App">
+    <Application.Resources>
+        <Style x:Key="XAMLEssentialsStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="Orange"/>
+        </Style>
+        <Style x:Key="sliderStyle" TargetType="Slider">
+            <Setter Property="ThumbImageSource" Value="a1.png"/>
+            
+            
+        </Style>
+        
+    </Application.Resources>
+</Application>
