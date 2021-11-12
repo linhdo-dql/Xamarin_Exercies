@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layouts.AbsoluteLayout_Exercises_1"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <BoxView 
+                BackgroundColor="#f7f7f7"
+                AbsoluteLayout.LayoutBounds="0,0,1,0.33"
+                AbsoluteLayout.LayoutFlags="SizeProportional"/>
+            <StackLayout
+                    AbsoluteLayout.LayoutBounds="0,0,1,0.33"
+                    AbsoluteLayout.LayoutFlags="All">
+                <StackLayout
+                        VerticalOptions="CenterAndExpand">
+                    <Label Text="$11.95" 
+                           FontSize="60"
+                           FontAttributes="Bold"
+                           TextColor="#33353a"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand"/>
+                    <Button Text="Add $7.99 Credit" 
+                            TextTransform="None"
+                            TextColor="White"
+                            HeightRequest="30"
+                            Padding="35,0,35,0"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="#1695A3"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            CornerRadius="15"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0.5,1.2,1,0.67"
+                         AbsoluteLayout.LayoutFlags="All">
+                    <Label Text="Why pay for credit?"
+                           FontSize="15"
+                           TextColor="Black"
+                           HorizontalOptions="Center"
+                           FontAttributes="Bold"/>
+                <Label Text="Because you can reach people who aren't on 
+                             SkyApp by calling mobile and landline 
+                             numbers, or spending SMS, at low-costs rates."
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       Padding="10"
+                       WidthRequest="300"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
