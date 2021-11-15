@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navigation.ProfilePage"
+             xmlns:CI="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <ContentPage.Content>
+        <StackLayout Padding="20,20,20,0">
+            <StackLayout Orientation="Horizontal">
+                <CI:CircleImage Source="https://lorempixel.com/200/200/people/10/"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.3*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout VerticalOptions="Center" Margin="20,0,0,0" Grid.Row="0" Grid.Column="0">
+                        <Label Text="6.368" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="Posts" TextColor="Black" Padding="0,0,0,0" FontSize="13" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="Center" Grid.Row="0" Grid.Column="1">
+                        <Label Text="350 M" TextColor="Black" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                        <Label Text="Followers" TextColor="Black" Padding="0,0,0,0" FontSize="13" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="Center" Grid.Row="0" Grid.Column="2">
+                        <Label Text="101" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="Following" TextColor="Black" Padding="0,0,0,0" FontSize="13" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <Label Text="linhdo_2609" TextColor="Black" FontAttributes="Bold"/>
+            <Label Text="Bringing you closer to the people an things you love. s2" TextColor="Black" Padding="0,0,50,0"/>
+            <Label Text="https://facebook.com/linhlee_l3pg" TextColor="CornflowerBlue"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.5*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="38"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Text="Follow" TextTransform="None" TextColor="White" BackgroundColor="CornflowerBlue" CornerRadius ="3" FontSize="13"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Message" TextTransform="None" TextColor="Black" BackgroundColor="White" CornerRadius ="5" FontSize="13" BorderWidth="1" BorderColor="Black"/>
+                <Button Grid.Row="0" Grid.Column="2" Text="+" BackgroundColor="White" CornerRadius ="5" BorderWidth="1" BorderColor="Black"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
