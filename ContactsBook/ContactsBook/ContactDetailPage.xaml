@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactsBook.ContactDetailPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <TableView 
+                AbsoluteLayout.LayoutBounds="0,0,1,0.58" AbsoluteLayout.LayoutFlags="All"
+                RowHeight="50">
+                <TableRoot>
+                    <TableSection Title="NAME">
+                        <EntryCell x:Name="entryFName" Label="First Name" LabelColor="Black"/>
+                        <EntryCell x:Name="entryLName" Label="Last Name" LabelColor="Black"/>
+                    </TableSection>
+                    <TableSection Title="CONTACT">
+                        <EntryCell  x:Name="entryPhone" Placeholder="Phone" Keyboard="Numeric"/>
+                        <EntryCell  x:Name="entryEmail" Placeholder="Email" Keyboard="Email"/>
+                        <SwitchCell x:Name="swBlocked" On="False" Text="Blocked" OnColor="Blue" OnChanged="swBlocked_OnChanged"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button AbsoluteLayout.LayoutBounds="0,0.65,1,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                    Text="Save"
+                    BackgroundColor="White"
+                    TextColor="CornflowerBlue"
+                    BorderColor="Gray"
+                    BorderWidth="1"
+                    Clicked="Button_Clicked"/>
+        </AbsoluteLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
