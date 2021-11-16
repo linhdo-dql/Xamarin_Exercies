@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAML_Essentials.QuotesPage"
+             Padding="20">
+    <!--Set layout cho từng platform-->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                   Android="20,30,20,20"
+                   WinPhone="20,40,20,20"/>
+    </ContentPage.Padding>
+    
+    <StackLayout>
+        <Button Text="Next" Clicked="Button_Clicked" Style="{StaticResource XAMLEssentialsStyle}" />
+        <!--Binding giá trị của slider vào Text của Label-->
+        <Label 
+            BindingContext="{x:Reference slider}" 
+			Text="{Binding Path=Value, 
+		    StringFormat='Font Size: {0:N0}'}" />
+        <Slider 
+			x:Name="slider" 
+			Maximum="50" 
+			Minimum="16" 
+            Style="{StaticResource sliderStyle}"/>
+        <!--Binding giá trị của slider vào Font của Label-->
+        <Label
+            BindingContext="{x:Reference slider}"
+			x:Name="currentQuote" 
+			FontSize="{Binding Value}"
+            />
+    </StackLayout>
+    
+</ContentPage>
