@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lists.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform  x:TypeArguments="Thickness"
+            iOS="0,20,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"/>
+            <ListView x:Name="listView" SeparatorColor="CornflowerBlue"
+                        SeparatorVisibility="Default"
+                        HasUnevenRows="True"
+                        IsGroupingEnabled="True"
+                        GroupDisplayBinding="{Binding Title}"
+                        IsPullToRefreshEnabled="True"
+                        Refreshing="listView_Refreshing"
+                        ItemSelected="listView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Location}" TextColor="Black" Detail="{Binding DetailTime}">
+                            <TextCell.ContextActions>
+                                <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}" />
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
