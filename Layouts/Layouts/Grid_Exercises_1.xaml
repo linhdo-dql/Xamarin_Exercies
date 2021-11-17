@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layouts.Grid_Exercises_1"
+             BackgroundColor="#354242">
+    <ContentPage.Content>
+        <Grid Padding="40"
+              RowSpacing="10"
+              ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".05*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="1" Grid.Column="0"
+                   Grid.ColumnSpan="3" 
+                   Text="1234" 
+                   FontSize="50"
+                   HorizontalOptions="Center"
+                   TextColor="White"/>
+            <Button Grid.Row="3"
+                    Grid.Column="0"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="1"/>
+            <Button Grid.Row="3"
+                    Grid.Column="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="2"/>
+            <Button Grid.Row="3"
+                    Grid.Column="2"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="3"/>
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="4"/>
+            <Button Grid.Row="4"
+                    Grid.Column="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="5"/>
+            <Button Grid.Row="4"
+                    Grid.Column="2"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="6"/>
+            <Button Grid.Row="5"
+                    Grid.Column="0"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="7"/>
+            <Button Grid.Row="5"
+                    Grid.Column="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="8"/>
+            <Button Grid.Row="5"
+                    Grid.Column="2"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="9"/>
+            <Button Grid.Row="6"
+                    Grid.Column="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="0"/>
+            <Button Grid.Row="7"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="#96CA2D"
+                    CornerRadius="30"
+                    FontSize="30"
+                    TextColor="#28282c"
+                    Text="Dial"
+                    TextTransform="None"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
