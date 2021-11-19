@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactBookSQLite.MainPage"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Thêm" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ListView x:Name="listContact"
+                  ItemSelected="listContact_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FullName}" Detail="{Binding Id}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Xóa" Clicked="MenuItem_Clicked" CommandParameter="{Binding .}"/>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
